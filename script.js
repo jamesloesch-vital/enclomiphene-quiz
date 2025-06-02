@@ -401,13 +401,13 @@ class TRTQuiz {
             return {
                 name: 'Enclomiphene + Tadalafil',
                 image: 'assets/enclomiphene+tadalafil_product.png',
-                description: 'A powerful combination therapy that naturally boosts testosterone while enhancing sexual performance. Enclomiphene stimulates your body\'s natural testosterone production, while tadalafil improves blood flow and erectile function.'
+                description: 'It is a powerful combination therapy that naturally boosts testosterone while enhancing sexual performance. Enclomiphene stimulates your body\'s natural testosterone production, while tadalafil improves blood flow and erectile function.'
             };
         } else if (answer.includes('no')) {
             return {
                 name: 'Enclomiphene',
                 image: 'assets/enclomiphene.png',
-                description: 'A selective estrogen receptor modulator that naturally stimulates your body to produce more testosterone. This oral medication helps optimize hormone levels without suppressing your natural production.'
+                description: 'It raises natural testosterone levels by up to 2.5x, with no testicular shutdown. It is a selective estrogen receptor modulator that naturally stimulates your body to produce more testosterone. This once-daily pill is a safe and effective way to optimize your testosterone levels.'
             };
         } else {
             // Default to Enclomiphene
