@@ -1,0 +1,2325 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: 'LT Superior';
+    src: url('fonts/lt_superior (1)/LTSuperior-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LT Superior';
+    src: url('fonts/lt_superior (1)/LTSuperior-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LT Superior';
+    src: url('fonts/lt_superior (1)/LTSuperior-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LT Superior';
+    src: url('fonts/lt_superior (1)/LTSuperior-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'LT Superior', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #FAFAF5;
+    min-height: 100vh;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #EAEAE1;
+    padding: 1rem 2rem;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 28px;
+    width: auto;
+}
+
+/* First Question Section */
+.first-question-section {
+    min-height: calc(100vh - 72px);
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    min-height: calc(100vh - 72px); /* Subtract navbar height */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Image Section (Left Side) - 50% */
+.image-section {
+    flex: 1;
+    background-color: #F5F4F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Quiz Section (Right Side) - 50% */
+.quiz-section {
+    flex: 1;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Centered Question Section */
+.centered-question-section {
+    min-height: 100vh;
+    background-color: #FAFAF5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    display: none; /* Initially hidden */
+}
+
+.centered-quiz-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.centered-question-section .quiz-steps {
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+}
+
+.centered-question-section .question-title {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.centered-question-section .answer-options {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.centered-question-section .question-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Quiz Steps */
+.quiz-steps {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    justify-content: flex-start;
+}
+
+.step {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.step.active {
+    color: #2C2C2C;
+}
+
+/* Question */
+.question-container {
+    width: 100%;
+}
+
+.question-title {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Answer Options */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.answer-btn {
+    background-color: #906323;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 60px;
+    width: 548px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-btn:hover {
+    background-color: #7A5420;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(144, 99, 35, 0.3);
+}
+
+.answer-btn:active {
+    transform: translateY(0);
+}
+
+.answer-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(144, 99, 35, 0.3);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    min-height: 100vh;
+    background-color: #EAEAE1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    display: none; /* Initially hidden */
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-form-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.contact-form-subtext {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+
+.contact-form-description {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-input {
+    background-color: #D3D3CC;
+    border: none;
+    border-radius: 30px;
+    padding: 1.25rem 1.5rem;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2C2C2C;
+    min-height: 60px;
+    transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+    color: #888888;
+}
+
+.form-input:focus {
+    outline: none;
+    background-color: #C8C8C1;
+    box-shadow: 0 0 0 3px rgba(144, 99, 35, 0.2);
+}
+
+.form-submit-btn {
+    background-color: #906323;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 1.25rem 2rem;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 60px;
+    letter-spacing: 1px;
+}
+
+.form-submit-btn:hover {
+    background-color: #7A5420;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(144, 99, 35, 0.3);
+}
+
+.form-submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(144, 99, 35, 0.3);
+}
+
+.skip-discount-link {
+    color: #666666;
+    text-decoration: underline;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    margin-top: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.skip-discount-link:hover {
+    color: #444444;
+}
+
+/* Recommendation Section */
+.recommendation-section {
+    min-height: 100vh;
+    background-color: #FAFAF5;
+    padding: 4rem 2rem;
+    display: none; /* Initially hidden */
+}
+
+.recommendation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.recommendation-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.recommendation-preview-text {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.recommendation-title {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.product-showcase {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.product-image-container {
+    width: 600px;
+    height: 600px;
+    background-color: #EAE8E1;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 3rem;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-width: 520px;
+    max-height: 520px;
+}
+
+.product-details {
+    max-width: 500px;
+    flex: 1;
+}
+
+.product-info {
+    margin-bottom: 3rem;
+}
+
+.product-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    color: #2C2C2C;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.benefit-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.benefit-text {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.4;
+}
+
+.pricing-section {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card {
+    width: 288px;
+    height: 148px;
+    background-color: #EAE8E1;
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.pricing-card:nth-child(1) {
+    border: 2px solid #906323;
+}
+
+.pricing-card:nth-child(1) .pricing-badge {
+    background-color: #22C55E;
+}
+
+.pricing-card:nth-child(2) .pricing-badge {
+    background-color: #F97316;
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -8px;
+    right: 16px;
+    background-color: #906323;
+    color: white;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    z-index: 10;
+}
+
+.pricing-label {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-amount {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: #2C2C2C;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-period {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.pricing-note {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.3;
+}
+
+.more-info-link {
+    color: #666666;
+    text-decoration: underline;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.more-info-link:hover {
+    color: #444444;
+}
+
+.cta-button {
+    width: 591px;
+    height: 49px;
+    background-color: #906323;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 100%;
+}
+
+.cta-button:hover {
+    background-color: #7A5420;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(144, 99, 35, 0.3);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.cta-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(144, 99, 35, 0.3);
+}
+
+/* User Goals Section */
+.user-goals-section {
+    min-height: auto;
+    background-color: #EAEAE1;
+    padding: 4rem 2rem;
+    display: none; /* Initially hidden */
+}
+
+.user-goals-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.user-goals-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.user-goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.goal-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9A805B 0%, #5B421F 100%);
+    flex-shrink: 0;
+}
+
+.goal-text {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #9A805B 0%, #5B421F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.3;
+}
+
+.goals-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #CCCCCC;
+    margin: 0 auto 4rem auto;
+}
+
+/* Benefits Explanation Section */
+.benefits-explanation {
+    margin-bottom: 3rem;
+}
+
+.benefits-recommendation-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.product-name-underlined {
+    background: linear-gradient(135deg, #9A805B 0%, #5B421F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: underline;
+    text-decoration-color: #9A805B;
+    text-underline-offset: 0.2em;
+}
+
+.benefits-recommendation-text {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 29px;
+    font-weight: 500;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Key Benefits Section */
+.key-benefits-section {
+    margin-top: 3rem;
+}
+
+.key-benefits-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #888888;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+
+.benefits-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+}
+
+.benefit-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-card-content {
+    background-color: #FAFAF5;
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+    gap: 16px;
+}
+
+.benefit-card-title {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.benefit-card-description {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+}
+
+.benefit-card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.benefit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.benefit-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.benefit-icon-overlay {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(217, 217, 217, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.benefit-icon-img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+}
+
+/* Comparison Chart Section */
+.comparison-chart-section {
+    background-color: #FAFAF5;
+    padding: 3rem 1rem;
+    margin: 0;
+    display: none; /* Initially hidden */
+}
+
+.comparison-container {
+    max-width: 100%;
+    text-align: center;
+}
+
+.comparison-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comparison-description {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comparison-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comparison-image {
+    max-width: 52%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Treatment Options Grid for "I'm not sure" selection */
+.treatment-options-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.treatment-option {
+    flex: 1;
+    max-width: 365px;
+    display: flex;
+    justify-content: center;
+}
+
+.treatment-image {
+    width: 100%;
+    max-width: 365px;
+    height: 448px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .image-section {
+        min-height: 50vh;
+    }
+    
+    .quiz-section {
+        flex: none;
+        min-height: auto;
+    }
+    
+    .quiz-container {
+        max-width: 500px;
+    }
+    
+    .centered-quiz-container {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .image-section {
+        min-height: 40vh;
+    }
+    
+    .quiz-section,
+    .centered-question-section {
+        padding: 2rem 1rem;
+    }
+    
+    .contact-form-section {
+        padding: 2rem 1rem;
+    }
+    
+    .contact-form-header {
+        font-size: 36px;
+    }
+    
+    .contact-form-subtext {
+        font-size: 24px;
+    }
+    
+    .contact-form-description {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+    
+    .question-title {
+        font-size: 24px;
+    }
+    
+    .step {
+        font-size: 19px;
+    }
+    
+    .answer-btn {
+        font-size: 15px;
+        padding: 0.875rem 1.25rem;
+    }
+
+    /* Recommendation Section Mobile */
+    .recommendation-section {
+        padding: 2rem 1rem;
+    }
+
+    .recommendation-header {
+        margin-bottom: 3rem;
+    }
+
+    .recommendation-title {
+        font-size: 36px;
+    }
+
+    .product-showcase {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .product-image-container {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+    }
+
+    .product-details {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .product-header {
+        font-size: 32px;
+    }
+
+    .pricing-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* User Goals Section */
+    .user-goals-section {
+        padding: 3rem 1rem;
+    }
+    
+    .user-goals-header {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+    
+    .goal-text {
+        font-size: 28px;
+    }
+    
+    .user-goals-list {
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Benefits Section Mobile */
+    .benefits-recommendation-header {
+        font-size: 32px;
+    }
+    
+    .benefits-recommendation-text {
+        font-size: 24px;
+    }
+    
+    .benefits-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .benefit-card-content {
+        padding: 1.25rem;
+    }
+    
+    .benefit-card-title {
+        font-size: 28px;
+        margin-bottom: 0.75rem;
+    }
+    
+    .benefit-card-description {
+        font-size: 16px;
+    }
+    
+    .benefit-card {
+        height: 350px;
+    }
+    
+    .benefit-icon-overlay {
+        width: 40px;
+        height: 40px;
+        bottom: 0.75rem;
+        left: 0.75rem;
+    }
+    
+    .benefit-icon-img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Comparison Chart Mobile */
+    .comparison-chart-section {
+        padding: 2rem 1rem;
+    }
+    
+    .comparison-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .comparison-header {
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .comparison-description {
+        font-size: 14px;
+        margin-bottom: 3rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .comparison-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    
+    .comparison-image {
+        max-width: 95%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        transform: scale(1.01);
+    }
+    
+    /* Treatment Options Grid Small Mobile */
+    .treatment-options-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .treatment-option {
+        max-width: 100%;
+    }
+    
+    .treatment-image {
+        max-width: 240px;
+        height: auto;
+        aspect-ratio: 365/448;
+    }
+}
+
+@media (max-width: 480px) {
+    .question-title {
+        font-size: 20px;
+    }
+    
+    .step {
+        font-size: 16px;
+    }
+    
+    .quiz-steps {
+        gap: 0.75rem;
+    }
+    
+    .contact-form-header {
+        font-size: 28px;
+        margin-bottom: 0.75rem;
+    }
+    
+    .contact-form-subtext {
+        font-size: 20px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-form-description {
+        font-size: 16px;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-form {
+        gap: 1rem;
+    }
+    
+    .form-input {
+        padding: 1rem 1.25rem;
+        font-size: 15px;
+        min-height: 50px;
+    }
+    
+    .form-submit-btn {
+        padding: 1rem 1.5rem;
+        font-size: 15px;
+        min-height: 50px;
+    }
+
+    /* Recommendation Section Small Mobile */
+    .recommendation-title {
+        font-size: 28px;
+    }
+
+    .product-header {
+        font-size: 28px;
+    }
+
+    .product-description {
+        font-size: 15px;
+    }
+
+    .benefit-text {
+        font-size: 15px;
+    }
+
+    .pricing-amount {
+        font-size: 28px;
+    }
+
+    .pricing-label {
+        font-size: 13px;
+    }
+
+    .pricing-note {
+        font-size: 11px;
+    }
+
+    .pricing-badge {
+        font-size: 10px;
+        padding: 3px 10px;
+        top: -6px;
+        right: 12px;
+    }
+
+    .cta-button {
+        height: 50px;
+        font-size: 15px;
+    }
+
+    /* User Goals Section Small Mobile */
+    .user-goals-header {
+        font-size: 28px;
+    }
+    
+    .goal-text {
+        font-size: 24px;
+    }
+    
+    .goal-item {
+        align-items: flex-start;
+    }
+    
+    .goal-bullet {
+        margin-top: 0.375rem;
+        width: 6px;
+        height: 6px;
+    }
+    
+    .benefits-recommendation-header {
+        font-size: 28px;
+    }
+    
+    .benefits-recommendation-text {
+        font-size: 20px;
+    }
+    
+    .key-benefits-header {
+        font-size: 20px;
+    }
+    
+    .benefit-card-content {
+        padding: 1rem;
+    }
+    
+    .benefit-card-title {
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .benefit-card-description {
+        font-size: 16px;
+    }
+    
+    .benefit-card {
+        height: 300px;
+    }
+    
+    .benefit-icon-overlay {
+        width: 36px;
+        height: 36px;
+        bottom: 0.5rem;
+        left: 0.5rem;
+    }
+    
+    .benefit-icon-img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    /* Comparison Chart Small Mobile */
+    .comparison-chart-section {
+        padding: 2rem 1rem;
+    }
+    
+    .comparison-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .comparison-header {
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .comparison-description {
+        font-size: 14px;
+        margin-bottom: 3rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .comparison-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    
+    .comparison-image {
+        max-width: 95%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        transform: scale(1.01);
+    }
+}
+
+/* Process Section */
+.process-section {
+    background-color: #EAEAE1;
+    padding: 80px 2rem;
+    display: none; /* Initially hidden like other sections */
+}
+
+.process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.process-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: stretch; /* This ensures all cards stretch to equal height */
+}
+
+.process-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* This allows the content to stretch */
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.process-card-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.process-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.process-number-icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+    background-color: #FAFAF5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.process-number {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.process-card-content {
+    background-color: #FAFAF5;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1; /* This makes the content section take up available space */
+}
+
+.process-card-title {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.process-card-description {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+}
+
+/* Responsive Design for Process Section */
+@media (max-width: 1024px) {
+    .process-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    
+    .process-card-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-section {
+        padding: 60px 1rem;
+    }
+    
+    .process-header {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .process-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .process-card-content {
+        padding: 20px;
+        height: auto;
+    }
+    
+    .process-card-title {
+        font-size: 28px;
+    }
+    
+    .process-card-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-section {
+        padding: 40px 1rem;
+    }
+    
+    .process-header {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .process-card-image-container {
+        height: 160px;
+    }
+    
+    .process-card-content {
+        padding: 16px;
+    }
+    
+    .process-card-title {
+        font-size: 24px;
+    }
+    
+    .process-card-description {
+        font-size: 12px;
+    }
+    
+    .process-number-icon {
+        width: 36px;
+        height: 36px;
+        top: 12px;
+        left: 12px;
+    }
+    
+    .process-number {
+        font-size: 14px;
+    }
+}
+
+/* Testimonials Carousel Section */
+.testimonials-section {
+    background-color: #FAFAF5;
+    padding: 4rem 2rem;
+    overflow: hidden;
+    display: none; /* Initially hidden like other sections */
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #2C2C2C;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.testimonials-carousel {
+    position: relative;
+    width: 100%;
+}
+
+.testimonials-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #9C7F56;
+    width: 928px;
+    height: 370px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    position: relative;
+    padding: 3rem 4rem;
+    overflow: hidden;
+}
+
+.quotes-icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 2;
+}
+
+.quote-svg {
+    width: 48px;
+    height: auto;
+    filter: brightness(0) invert(1); /* Make quotes white */
+}
+
+.testimonial-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+.testimonial-text {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.testimonial-author {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-title {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Carousel Navigation */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.carousel-btn {
+    background-color: #9C7F56;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.carousel-btn:hover {
+    background-color: #8A6D47;
+    transform: scale(1.05);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #CCCCCC;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #9C7F56;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background-color: #9C7F56;
+}
+
+/* Responsive Design for Testimonials */
+@media (max-width: 1024px) {
+    .testimonials-carousel {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .testimonials-carousel::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .testimonials-track {
+        scroll-snap-type: x mandatory;
+    }
+    
+    .testimonial-card {
+        scroll-snap-align: center;
+        width: 90vw;
+        max-width: 800px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 3rem 1rem;
+    }
+    
+    .testimonials-header {
+        font-size: 28px;
+        margin-bottom: 2rem;
+    }
+    
+    .testimonial-card {
+        width: 90vw;
+        height: auto;
+        min-height: 400px;
+        padding: 1.5rem;
+    }
+    
+    .testimonial-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .testimonial-text-content {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .testimonial-text {
+        font-size: 15px;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+    
+    .quotes-icon {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .quote-svg {
+        width: 36px;
+    }
+    
+    .carousel-nav {
+        margin-top: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-section {
+        padding: 3rem 1rem;
+    }
+    
+    .testimonials-header {
+        font-size: 28px;
+    }
+    
+    .testimonial-card {
+        padding: 2rem 1.5rem;
+        min-width: 300px;
+    }
+    
+    .testimonial-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .testimonial-author {
+        font-size: 12px;
+    }
+    
+    .testimonial-title {
+        font-size: 11px;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: #FAFAF5;
+    padding: 5rem 2rem;
+    display: none; /* Initially hidden */
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #2C2C2C;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.faq-subheader {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 4rem;
+    line-height: 1.4;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background-color: #EAE8E1;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(144, 99, 35, 0.05);
+}
+
+.faq-question-text {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2C2C2C;
+    line-height: 1.4;
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.faq-icon {
+    color: #906323;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer.active {
+    max-height: 500px;
+}
+
+.faq-answer-content {
+    padding: 0 2.5rem 2rem 2.5rem;
+}
+
+.faq-answer-content p {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* FAQ Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .faq-section {
+        padding: 4rem 2rem;
+    }
+    
+    .faq-header {
+        font-size: 42px;
+    }
+    
+    .faq-question {
+        padding: 1.75rem 2rem;
+    }
+    
+    .faq-question-text {
+        font-size: 17px;
+    }
+    
+    .faq-answer-content {
+        padding: 0 2rem 1.75rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .faq-header {
+        font-size: 36px;
+    }
+    
+    .faq-subheader {
+        font-size: 16px;
+        margin-bottom: 3rem;
+    }
+    
+    .faq-question {
+        padding: 1.5rem 1.75rem;
+    }
+    
+    .faq-question-text {
+        font-size: 16px;
+        margin-right: 0.75rem;
+    }
+    
+    .faq-answer-content {
+        padding: 0 1.75rem 1.5rem 1.75rem;
+    }
+    
+    .faq-answer-content p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 2.5rem 1rem;
+    }
+    
+    .faq-header {
+        font-size: 28px;
+    }
+    
+    .faq-subheader {
+        font-size: 14px;
+        margin-bottom: 2.5rem;
+    }
+    
+    .faq-question {
+        padding: 1.25rem 1.5rem;
+    }
+    
+    .faq-question-text {
+        font-size: 15px;
+        margin-right: 0.5rem;
+    }
+    
+    .faq-answer-content {
+        padding: 0 1.5rem 1.25rem 1.5rem;
+    }
+    
+    .faq-answer-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .faq-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    background: linear-gradient(135deg, #9A805B 0%, #5B421F 100%);
+    padding: 4rem 2rem 2rem 2rem;
+    display: none; /* Initially hidden */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.footer-links-section {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column-header {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-link {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 1.3;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #EAE8E1;
+    text-decoration: underline;
+}
+
+.footer-logo-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    height: 48px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer-copyright {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin: 0;
+    text-align: left;
+}
+
+/* Footer Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+    
+    .footer-links-section {
+        gap: 3rem;
+    }
+    
+    .footer-logo {
+        height: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
+    
+    .footer-content {
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .footer-links-section {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+    
+    .footer-column-header {
+        font-size: 16px;
+        margin-bottom: 1.25rem;
+    }
+    
+    .footer-link {
+        font-size: 15px;
+    }
+    
+    .footer-logo {
+        height: 36px;
+    }
+    
+    .footer-bottom {
+        padding-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+    
+    .footer-content {
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-links-section {
+        gap: 1.5rem;
+    }
+    
+    .footer-column-header {
+        font-size: 15px;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-link {
+        font-size: 14px;
+    }
+    
+    .footer-links {
+        gap: 0.75rem;
+    }
+    
+    .footer-logo {
+        height: 28px;
+    }
+    
+    .footer-copyright {
+        font-size: 12px;
+    }
+    
+    .footer-bottom {
+        padding-top: 1.25rem;
+    }
+}
+
+.pricing-note {
+    font-size: 11px;
+}
+
+.pricing-badge {
+    font-size: 10px;
+    padding: 3px 10px;
+    top: -6px;
+    right: 12px;
+}
+
+.cta-button {
+    width: 100%;
+    max-width: 350px;
+    font-size: 15px;
+    height: 45px;
+}
+
+/* Pricing Modal Styles */
+.pricing-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.pricing-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1001;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.modal-title {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2C2C2C;
+    margin: 0;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #666666;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close-btn:hover {
+    background-color: #F5F5F5;
+    color: #2C2C2C;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.pricing-detail-section {
+    margin-bottom: 2rem;
+}
+
+.pricing-detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.pricing-detail-title {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2C2C2C;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.pricing-detail-description {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.pricing-detail-list {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.pricing-detail-list li {
+    margin-bottom: 0.5rem;
+}
+
+.pricing-detail-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Modal Responsive Styles */
+@media (max-width: 768px) {
+    .pricing-modal {
+        padding: 1rem;
+    }
+    
+    .modal-content {
+        border-radius: 12px;
+        max-height: 95vh;
+    }
+    
+    .modal-header {
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+    
+    .modal-title {
+        font-size: 24px;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .pricing-detail-title {
+        font-size: 18px;
+    }
+    
+    .pricing-detail-description,
+    .pricing-detail-list {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-modal {
+        padding: 0.5rem;
+    }
+    
+    .modal-header {
+        padding: 1.25rem 1.25rem 0.75rem 1.25rem;
+    }
+    
+    .modal-title {
+        font-size: 22px;
+    }
+    
+    .modal-body {
+        padding: 1.25rem;
+    }
+    
+    .pricing-detail-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    .pricing-detail-title {
+        font-size: 17px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .pricing-detail-description,
+    .pricing-detail-list {
+        font-size: 14px;
+    }
+} 
