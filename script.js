@@ -216,20 +216,20 @@ class TRTQuiz {
                 _cio.identify({
                     id: contactInfo.email,
                     email: contactInfo.email,
-                    name: contactInfo.fullName,
+                    name: {"from": contactInfo.fullName, "to": ""},
                     // Quiz answers
-                    quiz_answer_1: this.answers[1] || '',
-                    quiz_answer_2: this.answers[2] || '',
-                    quiz_answer_3: this.answers[3] || '',
-                    quiz_answer_4: this.answers[4] || '',
-                    quiz_answer_5: this.answers[5] || '',
+                    quiz_answer_1: {"from": this.answers[1] || '', "to": ""},
+                    quiz_answer_2: {"from": this.answers[2] || '', "to": ""},
+                    quiz_answer_3: {"from": this.answers[3] || '', "to": ""},
+                    quiz_answer_4: {"from": this.answers[4] || '', "to": ""},
+                    quiz_answer_5: {"from": this.answers[5] || '', "to": ""},
                     // Recommendations
-                    primary_product_recommendation: this.recommendation.primary,
-                    recommendation_reasoning: this.recommendation.reasoning,
+                    primary_product_recommendation: {"from": this.recommendation.primary, "to": ""},
+                    recommendation_reasoning: {"from": this.recommendation.reasoning, "to": ""},
                     // Metadata
-                    quiz_completed_at: new Date().toISOString(),
-                    quiz_version: '1.0',
-                    lead_source: 'enclomiphene_quiz'
+                    quiz_completed_at: {"from": new Date().toISOString(), "to": ""},
+                    quiz_version: {"from": '1.0', "to": ""},
+                    lead_source: {"from": 'trt_quiz', "to": ""}
                 });
 
                 // Track quiz completion event
