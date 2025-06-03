@@ -229,7 +229,7 @@ class TRTQuiz {
                     // Metadata
                     quiz_completed_at: new Date().toISOString(),
                     quiz_version: '1.0',
-                    lead_source: 'trt_quiz'
+                    lead_source: 'enclomiphene_quiz'
                 });
 
                 // Track quiz completion event
