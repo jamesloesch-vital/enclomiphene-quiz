@@ -197,6 +197,7 @@ class TRTQuiz {
         const contactInfo = {
             fullName: formData.get('fullName'),
             email: formData.get('email'),
+            phoneNumber: formData.get('phoneNumber') || '', // Optional phone field
             answers: this.answers,
             recommendation: this.recommendation
         };
@@ -217,6 +218,7 @@ class TRTQuiz {
                     id: contactInfo.email,
                     email: contactInfo.email,
                     name: contactInfo.fullName,
+                    phone: contactInfo.phoneNumber, // Add phone number to Customer.io
                     // Quiz answers
                     quiz_answer_1: this.answers[1] || '',
                     quiz_answer_2: this.answers[2] || '',
@@ -229,7 +231,10 @@ class TRTQuiz {
                     // Metadata
                     quiz_completed_at: new Date().toISOString(),
                     quiz_version: '1.0',
-                    lead_source: 'enclomiphene_quiz'
+                    lead_source: 'enclomiphene_quiz',
+                    // Contact preferences
+                    phone_number_provided: contactInfo.phoneNumber ? 'yes' : 'no',
+                    care_team_contact_requested: contactInfo.phoneNumber ? 'yes' : 'no'
                 });
 
                 // Track quiz completion event
@@ -237,7 +242,8 @@ class TRTQuiz {
                     quiz_type: 'enclomiphene_assessment',
                     primary_recommendation: this.recommendation.primary,
                     total_questions: 5,
-                    completed_at: new Date().toISOString()
+                    completed_at: new Date().toISOString(),
+                    phone_provided: contactInfo.phoneNumber ? true : false
                 });
 
                 console.log('Successfully sent data to Customer.io');

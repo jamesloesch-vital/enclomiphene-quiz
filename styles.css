@@ -350,6 +350,51 @@ html {
     color: #444444;
 }
 
+/* Phone Section Styles */
+.phone-section {
+    margin: 1rem 0;
+}
+
+.phone-explanation {
+    font-family: 'LT Superior', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Ensure phone input matches other inputs exactly */
+input[name="phoneNumber"] {
+    background-color: #D3D3CC !important;
+    border: none !important;
+    border-radius: 30px !important;
+    padding: 1.25rem 1.5rem !important;
+    font-family: 'LT Superior', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #2C2C2C !important;
+    min-height: 60px !important;
+    height: 60px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+input[name="phoneNumber"]::placeholder {
+    color: #888888 !important;
+}
+
+input[name="phoneNumber"]:focus {
+    outline: none !important;
+    background-color: #C8C8C1 !important;
+    box-shadow: 0 0 0 3px rgba(144, 99, 35, 0.2) !important;
+}
+
 /* Recommendation Section */
 .recommendation-section {
     min-height: 100vh;
@@ -1109,6 +1154,19 @@ html {
         height: auto;
         aspect-ratio: 365/448;
     }
+
+    .phone-explanation {
+        font-size: 13px;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Ensure phone input matches mobile form inputs */
+    input[name="phoneNumber"] {
+        padding: 1rem 1.25rem !important;
+        font-size: 15px !important;
+        min-height: 50px !important;
+        height: 50px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1292,6 +1350,19 @@ html {
         border-radius: 20px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         transform: scale(1.01);
+    }
+
+    .phone-explanation {
+        font-size: 13px;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Ensure phone input matches mobile form inputs */
+    input[name="phoneNumber"] {
+        padding: 1rem 1.25rem !important;
+        font-size: 15px !important;
+        min-height: 50px !important;
+        height: 50px !important;
     }
 }
 
